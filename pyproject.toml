@@ -1,0 +1,65 @@
+# This section describes the Python project itself
+[project]
+
+# Name of the project (used when packaging/installing)
+name = "expense-tracker"
+
+# Version of the project
+version = "0.1.0"
+
+# Short description
+description = "Expense tracker web app"
+
+# Minimum Python version required
+requires-python = ">=3.11"
+
+# These are the libraries our app needs to run
+dependencies = [
+  "fastapi>=0.110",      # Web framework for building APIs/web apps
+  "uvicorn[standard]>=0.27", # ASGI server that runs FastAPI
+  "jinja2>=3.1",         # Template engine for HTML pages
+]
+
+# Optional dependencies used only for development
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.4",
+  "black>=24.0",
+  "httpx>=0.27"
+]
+
+# Configuration for Ruff (linter)
+[tool.ruff]
+
+# Maximum line length allowed
+line-length = 100
+
+# Python version rules should follow
+target-version = "py311"
+
+# These are rule groups Ruff will enforce
+select = ["E", "F", "I", "B", "UP"]
+
+# Ignore "line too long" errors
+ignore = ["E501"]
+
+# Configuration for Black (formatter)
+[tool.black]
+
+# Same line length as Ruff
+line-length = 100
+
+# Target Python version
+target-version = ["py311"]
+
+# Configuration for pytest
+[tool.pytest.ini_options]
+
+# Where tests are located
+testpaths = ["tests"]
+
+# Tell Python to treat "src" as the import root
+# This allows imports like:
+# from expense_tracker.web.app import app
+pythonpath = ["src"]
