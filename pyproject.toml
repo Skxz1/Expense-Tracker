@@ -18,6 +18,14 @@ dependencies = [
   "fastapi>=0.110",      # Web framework for building APIs/web apps
   "uvicorn[standard]>=0.27", # ASGI server that runs FastAPI
   "jinja2>=3.1",         # Template engine for HTML pages
+
+  # Database + migrations
+  "sqlalchemy>=2.0",
+  "alembic>=1.13",
+  "psycopg[binary]>=3.1",
+
+  # Configuration Management
+  "pydantic-setting>=2.0"
 ]
 
 # Optional dependencies used only for development
