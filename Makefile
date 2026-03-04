@@ -45,6 +45,7 @@ check:
 clean:
 	rm -rf .pytest_cache
 	rm -rf .ruff_cache
+	rm -rf *.egg-info
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 
 # ---- migrations (we will enable once Alembic is installed) ----
