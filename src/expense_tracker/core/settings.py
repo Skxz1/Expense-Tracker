@@ -12,11 +12,11 @@ class Settings(BaseSettings):
     """
 
     # Application Environment
-    ENV: str = Field(default="dev")
+    env: str = Field(default="dev")
 
     # Database connection string
     # Default = SQLite for local development
-    DATABASE_URL: str = Field(default="sqlite:///./expense_tracker.db")
+    database_url: str = Field(default="sqlite:///./expense_tracker.db")
 
     class Config:
         # Optional .env file support
