@@ -4,7 +4,6 @@ from fastapi import FastAPI
 # Import a response class that lets us return HTML
 from fastapi.responses import HTMLResponse
 
-
 # Create the FastAPI application instance
 # This object represents your entire web server
 app = FastAPI(title="Expense Tracker")
